@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 const SearchBar = ({ onSearch }) => {
     const [title, setTitle] = useState();
@@ -17,8 +18,8 @@ const SearchBar = ({ onSearch }) => {
                     type="text"
                     onChange={(e) => setTitle(e.target.value)}    
                 />
+                <Button type="submit">Search</Button>
             </div>
-            <button type="submit">Search</button>
         </form>
     )
 }
