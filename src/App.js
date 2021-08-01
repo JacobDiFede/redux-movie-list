@@ -19,7 +19,7 @@ let App = ({ movieList, getMovieList, removeMovieFromList  }) => {
         {
           movieList && movieList.list && movieList.list.map((movie) => (
             <Col xs={12} md={6} lg={3} key={movie.imdbID}>
-              <Card>
+              <Card bg="dark" border="dark" text="light">
                 <Card.Img variant="top" src={movie.Poster} alt={`${movie.Title} poster`} />
                 <Card.Body>
                   <Card.Title>{ movie.Title }</Card.Title>
