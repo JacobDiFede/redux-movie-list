@@ -1,6 +1,7 @@
 import RBNavbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -10,8 +11,8 @@ const Navbar = () => {
                 <RBNavbar.Toggle/>
                 <RBNavbar.Collapse/>
                     <Nav>
-                        <Nav.Link href="/redux-movie-list">Home</Nav.Link>
-                        <Nav.Link href="/redux-movie-list/usermovielist">Movie List</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/usermovielist">Movie List</Nav.Link>
                     </Nav>
             </Container>
         </RBNavbar>

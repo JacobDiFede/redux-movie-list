@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,9 +14,9 @@ ReactDOM.render(
       <Router>
         <Navbar/> 
         <Switch>
-          <Route exact path="/redux-movie-list" component={MovieSearch} />
-          <Route exact path="/redux-movie-list/usermovielist" component={App} />
-          <Route path='**' render={() => <Redirect to='/redux-movie-list'/> }/>
+          <Route exact path="/" component={MovieSearch} />
+          <Route exact path="/usermovielist" component={App} />
+          <Route path='**' render={() => <Redirect to='/'/> }/>
         </Switch>
       </Router>
     </Provider>
