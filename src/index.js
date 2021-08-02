@@ -14,9 +14,9 @@ ReactDOM.render(
       <Router>
         <Navbar/> 
         <Switch>
-          <Route exact path="/redux-movie-list" component={MovieSearch} />
-          <Route exact path="/redux-movie-list/usermovielist" component={App} />
-          <Route path='**' render={() => <Redirect to='/redux-movie-list'/> }/>
+          <Route exact path="/" component={MovieSearch} />
+          <Route path="/usermovielist" component={App} />
+          <Route path='**' render={() => <Redirect to='/'/> }/>
         </Switch>
       </Router>
     </Provider>

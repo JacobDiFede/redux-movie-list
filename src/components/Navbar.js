@@ -11,8 +11,8 @@ const Navbar = () => {
                 <RBNavbar.Toggle/>
                 <RBNavbar.Collapse/>
                     <Nav>
-                        <Nav.Link as={Link} to="/redux-movie-list">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/redux-movie-list/usermovielist">Movie List</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/usermovielist">Movie List</Nav.Link>
                     </Nav>
             </Container>
         </RBNavbar>
