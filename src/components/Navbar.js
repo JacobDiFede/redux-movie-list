@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <RBNavbar bg="dark" variant="dark">
             <Container>
-                <RBNavbar.Brand href="/">Movie Database</RBNavbar.Brand>
+                <RBNavbar.Brand as={Link} to="/">Movie Database</RBNavbar.Brand>
                 <RBNavbar.Toggle/>
                 <RBNavbar.Collapse/>
                     <Nav>
