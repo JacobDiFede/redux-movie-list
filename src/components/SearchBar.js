@@ -13,9 +13,10 @@ const SearchBar = ({ onSearch }) => {
     return (
         <form onSubmit={onFormSubmit}>
             <div className="form-group">
-                <label htmlFor="title">Title</label>
+                <label htmlFor="title">Welcome!</label>
                 <input
                     type="text"
+                    placeholder="Search for a movie!"
                     onChange={(e) => setTitle(e.target.value)}    
                 />
                 <Button type="submit">Search</Button>
