@@ -4,6 +4,7 @@ const movieListReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'GET_MOVIE_LIST': {
             const movieList = localStorage.getItem('movieList');
+            console.log(action.payload);
 
             return movieList
                 ? JSON.parse(movieList)
@@ -27,10 +28,11 @@ const movieListReducer = (state = initialState, action) => {
             let movieList = localStorage.getItem('movieList');
             movieList = JSON.parse(movieList);
             const updatedList = movieList.list.filter((movieFromList) => movieFromList.imdbID !== action.payload.imdbID);
-            if(updatedList.length) {
+            if (updatedList.length) {
               movieList.list = updatedList;
               localStorage.setItem('movieList', JSON.stringify(movieList));
             } else {
+              movieList = null;
               localStorage.removeItem('movieList');
             }
   

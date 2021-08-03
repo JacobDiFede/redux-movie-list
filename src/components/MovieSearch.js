@@ -8,14 +8,21 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Styled from 'styled-components';
+
+const StyledContainer = Styled(Container)` 
+  min-height: 100vh;
+  min-width: 100vw;
+  `;
 
 let MovieSearch = ({ addMovieToList }) => {
     const movieApiService = new MovieApiService();
+    const [title, setTitle] = useState();
 
     const [searchResults, setSearchResults] = useState(); 
-    const onSearch = async (title) => {
+    const onSearch = async () => {
         const results = await movieApiService.getMoviesByTitle(title);
-
+        console.log(title);
         setSearchResults(results.Search);
     }
 
@@ -26,13 +33,13 @@ let MovieSearch = ({ addMovieToList }) => {
     }
 
     return (
-        <Container>
-            <SearchBar onSearch={onSearch}/>
+        <StyledContainer className="bg-dark">
+            <SearchBar onSearch={onSearch} setTitle={setTitle}/>
             <Row>
                 {
                     searchResults && searchResults.map((movie) => (
                         <Col xs={12} md={6} lg={3} key={movie.imdbID}>
-                            <Card bg="dark" border="dark" text="light">
+                            <Card bg="dark" border="light" text="light">
                                 <Card.Img variant="top" src={movie.Poster} alt={`${movie.Title} poster`} />
                                 <Card.Body>
                                     <Card.Title>{ movie.Title }</Card.Title>
@@ -43,7 +50,7 @@ let MovieSearch = ({ addMovieToList }) => {
                     ))
                 }
             </Row>
-        </Container>
+        </StyledContainer>
     )
 }
 

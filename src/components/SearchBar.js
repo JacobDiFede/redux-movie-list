@@ -1,28 +1,36 @@
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 
-const SearchBar = ({ onSearch }) => {
-    const [title, setTitle] = useState();
+const SearchBar = ({ onSearch, setTitle }) => {
+    const onFormSubmit = (e) => {
+        onSearch();
+        e.preventDefault();
+    }
 
-    const onFormSubmit = (e) => {
-        e.preventDefault();
-
-        onSearch(title);
-    }
-
-    return (
-        <form onSubmit={onFormSubmit}>
-            <div className="form-group">
-                <label htmlFor="title">Welcome!</label>
-                <input
-                    type="text"
-                    placeholder="Search for a movie!"
-                    onChange={(e) => setTitle(e.target.value)}    
-                />
-                <Button type="submit">Search</Button>
-            </div>
-        </form>
-    )
+    return (
+        <Container>
+            <Form inline onSubmit={onFormSubmit}>
+                <Row>
+                    <Col sm={9}>
+                        <Form.Control
+                            type="text"
+                            id="movieTitle"
+                            name="movieTitle"
+                            placeholder="Search for a movie or show!"
+                            onChange={(e) => setTitle(e.target.value)}
+                            required
+                        />
+                    </Col>
+                    <Col sm={3}>
+                        <Button type="submit" className="SearchBarButton">Search</Button>
+                    </Col>
+                </Row>
+            </Form>
+        </Container>
+    )
 }
 
-export default SearchBar;
+export default SearchBar;
