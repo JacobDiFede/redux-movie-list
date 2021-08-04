@@ -10,6 +10,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Styled from 'styled-components';
+import { MovieDetails } from './MovieDetails';
 
 const StyledContainer = Styled(Container)` 
   min-height: 100vh;
@@ -19,8 +20,9 @@ const StyledContainer = Styled(Container)`
 let MovieSearch = ({ addMovieToList }) => {
     const movieApiService = new MovieApiService();
     const [title, setTitle] = useState();
-
+    const [selectedMovie, setSelectedMovie] = useState();
     const [searchResults, setSearchResults] = useState(); 
+
     const onSearch = async () => {
         const results = await movieApiService.getMoviesByTitle(title);
         setSearchResults(results.Search);
@@ -31,6 +33,8 @@ let MovieSearch = ({ addMovieToList }) => {
 
         addMovieToList(result);
     }
+
+    const handleClose = () => setSelectedMovie(null);
 
     return (
         <StyledContainer className="bg-dark">
@@ -43,10 +47,20 @@ let MovieSearch = ({ addMovieToList }) => {
                                 <Card.Img variant="top" src={movie.Poster} alt={`${movie.Title} poster`} />
                                 <Card.Body>
                                     <Card.Title>{ movie.Title }</Card.Title>
-                                    <Button variant="info" onClick={() => Modal(movie)}>Movie Details</Button>
+                                    <Button variant="info" onClick={() => setSelectedMovie(movie.imdbID)}>Movie Details</Button>
                                     <Button variant="primary" onClick={() => addToMovieList(movie.imdbID)}>Add To List</Button>
                                 </Card.Body>
                             </Card>
+                            { selectedMovie && selectedMovie === movie.imdbID && 
+                            <Modal
+                                show={!!selectedMovie}
+                                children={
+                                    <MovieDetails id={movie.imdbID}/>
+                                }
+                                handleClose={handleClose}
+                            >
+                            </Modal>
+                            }
                         </Col>
                     ))
                 }

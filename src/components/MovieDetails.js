@@ -8,7 +8,7 @@ export const MovieDetails = ({ id }) => {
 
     useEffect(() => {
         getMovieById(id);
-    }, [id])
+    })
 
     const getMovieById = async (id) => {
         const movie = await movieService.getMovieById(id);
