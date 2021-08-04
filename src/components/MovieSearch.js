@@ -35,7 +35,7 @@ let MovieSearch = ({ addMovieToList }) => {
     }
 
     const handleClose = () => setSelectedMovie(null);
-
+    
     return (
         <StyledContainer className="bg-dark">
             <SearchBar onSearch={onSearch} setTitle={setTitle}/>

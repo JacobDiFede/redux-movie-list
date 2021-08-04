@@ -1,0 +1,75 @@
+.Rating {
+    font-family: Arial;
+    font-size: 30px;
+    color: blue;
+}
+
+.Rated {
+    padding: 5px;
+    display: inline;
+    border-radius: 2px;
+    font-family: "Arial";
+    border: 0;
+    margin: 0;
+    background: gray;
+    font-size: 15px;    
+    line-height: 15px;
+    color: black;
+    width: auto;
+    height: auto;
+    box-sizing: content-box;
+}
+
+.Runtime {
+    padding: 5px;
+    display: inline;
+    border-radius: 2px;
+    font-family: "Arial";
+    border: 0;
+    margin: 0 10px;
+    background: gray;
+    font-size: 15px;    
+    line-height: 15px;
+    color: black;
+    width: auto;
+    height: auto;
+    box-sizing: content-box;
+}
+
+.Genre {
+    padding: 5px;
+    display: inline;
+    border-radius: 2px;
+    font-family: "Arial";
+    border: 0;
+    margin: 0;
+    background: gray;
+    font-size: 15px;    
+    line-height: 15px;
+    color: black;
+    width: auto;
+    height: auto;
+    box-sizing: content-box;
+}
+
+.PlotHeader {
+    text-align: left;
+    font-family: Arial;
+    border: 0;
+    margin: 0;
+}
+
+.Plot {
+    font-family: Arial;
+}
+
+.ActorsHeader {
+    text-align: left;
+    font-family: Arial;
+    border: 0;
+    margin: 0;
+}
+
+.Actors {
+    font-family: Arial;
+}

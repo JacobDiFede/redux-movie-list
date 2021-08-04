@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieApiService from "../services/movieApi.service";
+import '../styles/modalStyles.css'
 
 export const MovieDetails = ({ id }) => {
     const [movie, setMovie] = useState();
@@ -23,28 +24,28 @@ export const MovieDetails = ({ id }) => {
             <div>
                 <div>
                     <h2>{movie.Title}</h2>
-                    <span>
+                    <span className="Rating">
                         { movie.imdbRating }
                     </span>
                 </div>
                 <div>
-                    <span>
+                    <span className="Rated">
                         { movie.Rated }
                     </span>
-                    <span>
+                    <span className="Runtime">
                         { movie.Runtime }
                     </span>
-                    <span>
+                    <span className="Genre">
                         { movie.Genre }
                     </span>
                 </div>
                 <div>
-                    <h4>Plot</h4>
-                    { movie.Plot }
+                    <h4 className="PlotHeader">Plot</h4>
+                    <span className="Plot"> { movie.Plot } </span>
                 </div>
                 <div>
-                    <h4>Actors</h4>
-                    { movie.Actors }
+                    <h4 className="ActorsHeader">Actors</h4>
+                    <span className="Actors"> { movie.Actors } </span>
                 </div>
             </div>
         </div>
