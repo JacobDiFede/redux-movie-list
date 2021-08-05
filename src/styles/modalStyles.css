@@ -11,7 +11,7 @@
     font-family: "Arial";
     border: 0;
     margin: 0;
-    background: gray;
+    background: rgb(163, 163, 163);
     font-size: 15px;    
     line-height: 15px;
     color: black;
@@ -27,7 +27,7 @@
     font-family: "Arial";
     border: 0;
     margin: 0 10px;
-    background: gray;
+    background: rgb(163, 163, 163);
     font-size: 15px;    
     line-height: 15px;
     color: black;
@@ -43,7 +43,7 @@
     font-family: "Arial";
     border: 0;
     margin: 0;
-    background: gray;
+    background: rgb(163, 163, 163);
     font-size: 15px;    
     line-height: 15px;
     color: black;

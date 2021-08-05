@@ -9,18 +9,16 @@ import Navbar from './components/Navbar';
 import React from 'react';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={configureStore()}>
-      <Router>
-        <Navbar/> 
-        <Switch>
-          <Route exact path="/" component={MovieSearch} />
-          <Route path="/usermovielist" component={App} />
-          <Route path='**' render={() => <Redirect to='/'/> }/>
-        </Switch>
-      </Router>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={configureStore()}>
+    <Router>
+      <Navbar/> 
+      <Switch>
+        <Route exact path="/" component={MovieSearch} />
+        <Route path="/usermovielist" component={App} />
+        <Route path='**' render={() => <Redirect to='/'/> }/>
+      </Switch>
+    </Router>
+  </Provider>,
   document.getElementById('root')
 );
 
