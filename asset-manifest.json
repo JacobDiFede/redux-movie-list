@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/redux-movie-list/static/css/main.3469c477.chunk.css",
-    "main.js": "/redux-movie-list/static/js/main.b48e1bf3.chunk.js",
-    "main.js.map": "/redux-movie-list/static/js/main.b48e1bf3.chunk.js.map",
+    "main.css": "/redux-movie-list/static/css/main.9517f021.chunk.css",
+    "main.js": "/redux-movie-list/static/js/main.b02ce0e5.chunk.js",
+    "main.js.map": "/redux-movie-list/static/js/main.b02ce0e5.chunk.js.map",
     "runtime-main.js": "/redux-movie-list/static/js/runtime-main.67d4cffe.js",
     "runtime-main.js.map": "/redux-movie-list/static/js/runtime-main.67d4cffe.js.map",
     "static/css/2.4be38407.chunk.css": "/redux-movie-list/static/css/2.4be38407.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.8b3385c5.chunk.js.map": "/redux-movie-list/static/js/2.8b3385c5.chunk.js.map",
     "index.html": "/redux-movie-list/index.html",
     "static/css/2.4be38407.chunk.css.map": "/redux-movie-list/static/css/2.4be38407.chunk.css.map",
-    "static/css/main.3469c477.chunk.css.map": "/redux-movie-list/static/css/main.3469c477.chunk.css.map",
+    "static/css/main.9517f021.chunk.css.map": "/redux-movie-list/static/css/main.9517f021.chunk.css.map",
     "static/js/2.8b3385c5.chunk.js.LICENSE.txt": "/redux-movie-list/static/js/2.8b3385c5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.67d4cffe.js",
     "static/css/2.4be38407.chunk.css",
     "static/js/2.8b3385c5.chunk.js",
-    "static/css/main.3469c477.chunk.css",
-    "static/js/main.b48e1bf3.chunk.js"
+    "static/css/main.9517f021.chunk.css",
+    "static/js/main.b02ce0e5.chunk.js"
   ]
 }
